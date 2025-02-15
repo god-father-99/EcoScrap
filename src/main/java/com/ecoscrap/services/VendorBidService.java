@@ -36,6 +36,8 @@ public class VendorBidService {
             throw new RuntimeException("Bidding period is over for this bulk scrap listing");
         }
         VendorBid vendorBid=modelMapper.map(bid, VendorBid.class);
+        if(vendorBid.getBidAmount()<listing.getBasePrice())
+            throw new RuntimeException("Bidding amount must be greater than or equal to the base price");
         vendorBid.setBulkScrapListing(listing);
         String username= SecurityContextHolder.getContext().getAuthentication().getName();
         User user=userRepository.findByUsername(username).orElseThrow(()->new ResourceNotFoundException("User not found with username"+username));
