@@ -1,5 +1,6 @@
 package com.ecoscrap.services;
 
+import com.ecoscrap.dto.BulkScrapListingDto;
 import com.ecoscrap.dto.VendorBidDto;
 import com.ecoscrap.entities.BulkScrapListing;
 import com.ecoscrap.entities.User;
@@ -52,4 +53,8 @@ public class VendorBidService {
         return vendorBids.stream().map(vendorBid->modelMapper.map(vendorBid,VendorBidDto.class)).collect(Collectors.toList());
     }
 
+    public List<BulkScrapListingDto> getAllBulkScrapListing() {
+        List<BulkScrapListing> bulkScrapListings= bulkScrapListingRepository.findAll();
+        return bulkScrapListings.stream().map(bulkScrapListing -> modelMapper.map(bulkScrapListing,BulkScrapListingDto.class)).collect(Collectors.toList());
+    }
 }

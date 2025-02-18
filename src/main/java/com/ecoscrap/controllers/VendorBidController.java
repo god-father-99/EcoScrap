@@ -1,5 +1,6 @@
 package com.ecoscrap.controllers;
 
+import com.ecoscrap.dto.BulkScrapListingDto;
 import com.ecoscrap.dto.VendorBidDto;
 import com.ecoscrap.entities.VendorBid;
 import com.ecoscrap.services.VendorBidService;
@@ -25,5 +26,10 @@ public class VendorBidController {
     @GetMapping("/bulk-listing/{bulkListingId}")
     public ResponseEntity<List<VendorBidDto>> getBids(@PathVariable Long bulkListingId) {
         return ResponseEntity.ok(vendorBidService.getBidsForBulkListing(bulkListingId));
+    }
+
+    @GetMapping()
+    public ResponseEntity<List<BulkScrapListingDto>> getAllBulkScrapRequest() {
+        return ResponseEntity.ok(vendorBidService.getAllBulkScrapListing());
     }
 }
