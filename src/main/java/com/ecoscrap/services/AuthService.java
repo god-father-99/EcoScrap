@@ -28,7 +28,7 @@ public class AuthService {
         String refreshToken = jwtService.generateRefreshToken(user);
         sessionService.generateNewSession(user, refreshToken);
 
-        return new LoginResponseDto(user.getId(), accessToken, refreshToken);
+        return new LoginResponseDto(user.getId(), accessToken, refreshToken,user.getRoles());
     }
 
     public LoginResponseDto refreshToken(String refreshToken) {
@@ -37,6 +37,6 @@ public class AuthService {
         User user = userService.getUserById(userId);
 
         String accessToken = jwtService.generateAccessToken(user);
-        return new LoginResponseDto(user.getId(), accessToken, refreshToken);
+        return new LoginResponseDto(user.getId(), accessToken, refreshToken,user.getRoles());
     }
 }
