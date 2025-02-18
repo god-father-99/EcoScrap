@@ -40,8 +40,8 @@ public class AuctionClosureService {
         for (BulkScrapListing listing : listings) {
             if (LocalDateTime.now().isAfter(listing.getAuctionEndTime())) {
                 List<VendorBid> bids = vendorBidRepository.findByBulkScrapListingId(listing.getId());
-                log.info(bids.getFirst().getVendor().getUser().getName());
                 if (!bids.isEmpty()) {
+                    log.info(bids.getFirst().getVendor().getUser().getName());
                     VendorBid highestBid = bids.stream()
                             .max(Comparator.comparing(VendorBid::getBidAmount))
                             .orElse(null);
