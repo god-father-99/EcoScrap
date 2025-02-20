@@ -1,6 +1,7 @@
 package com.ecoscrap.entities;
 
 
+import com.ecoscrap.entities.enums.ComplaintStatus;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,4 +26,6 @@ public class Complaint {
     private String imageUrl ;
     @CreationTimestamp
     private LocalDate createdAt;
+    @Enumerated(EnumType.STRING)
+    private ComplaintStatus complaintStatus;
 }
