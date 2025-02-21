@@ -40,7 +40,7 @@ public class BulkScrapListingService {
     // Create a bulk scrap listing. Auction end time is set (e.g., 1 hour from now)
     public BulkScrapListingDto createBulkListing(BulkScrapListingDto listing) {
         BulkScrapListing listing1=modelMapper.map(listing, BulkScrapListing.class);
-        listing1.setAuctionEndTime(LocalDateTime.now().plusHours(1));
+        listing1.setAuctionEndTime(LocalDateTime.now().plusHours(3));
         String user= SecurityContextHolder.getContext().getAuthentication().getName();
         User user1=userRepository.findByUsername(user).orElseThrow(()->new ResourceNotFoundException("User not found"));
         Kabadiwala kabadiwala = kabadiwalaRepository.findByUser(user1).orElseThrow(()->new ResourceNotFoundException("Kabadiwala not found"));

@@ -35,7 +35,7 @@ public class WebSecurityConfig {
                 //.cors(cors->cors.disable())
                 .cors(cors -> cors.configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(List.of("http://10.160.33.181:3001"));
+                    config.setAllowedOrigins(List.of("http://10.160.33.9:3001"));
                     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     config.setAllowedHeaders(List.of("*"));
                     config.setAllowCredentials(true);

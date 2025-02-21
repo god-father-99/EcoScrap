@@ -21,4 +21,6 @@ public class OrderDto {
     private double totalPrice;
 
     private OrderStatus status = OrderStatus.PENDING;
+
+    private String razorpayOrderId;
 }

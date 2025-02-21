@@ -25,6 +25,8 @@ public class Order {
     private int quantity;
     private double totalPrice;
 
+    private String razorpayOrderId;
+
     @Enumerated(EnumType.STRING)
     private OrderStatus status = OrderStatus.PENDING;
 }
