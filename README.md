@@ -68,7 +68,7 @@ npm run dev
 
 ## Contributors
 - **Aditya Sahu** - [aditya23sahu@gmail.com.com](mailto:aditya23sahu@gmail.com.com)
-- **Lucky Kumar Swain** - [sdkswain@egmail.com](mailto:sdkswain@egmail.com)
+- **Lucky Kumar Swain** - [sdkswain@gmail.com](mailto:sdkswain@gmail.com)
 - **Ankit Subhamjyoti** - [ankitsubahnjyoti1@gmail.com](mailto:ankitsubahnjyoti1@gmail.com)
 
 ## How to Contribute
