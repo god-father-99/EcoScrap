@@ -1,0 +1,222 @@
+{
+  "pages": {
+    "/mcd/signin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/signin/page.js"
+    ],
+    "/mcd/signin/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/signin/loading.js"
+    ],
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/layout.css",
+      "static/chunks/app/layout.js"
+    ],
+    "/admin/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/profile/page.js"
+    ],
+    "/admin/profile/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/profile/loading.js"
+    ],
+    "/signin/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/signin/page.js"
+    ],
+    "/signin/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/signin/loading.js"
+    ],
+    "/mcd/signup/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/signup/page.js"
+    ],
+    "/mcd/signup/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/signup/loading.js"
+    ],
+    "/mcd/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/profile/page.js"
+    ],
+    "/mcd/profile/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/profile/loading.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/page.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/contact/page.css",
+      "static/chunks/app/contact/page.js"
+    ],
+    "/contact/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact/loading.js"
+    ],
+    "/coming/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/coming/page.js"
+    ],
+    "/coming/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/coming/loading.js"
+    ],
+    "/mcd/complaint/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mcd/complaint/page.css",
+      "static/chunks/app/mcd/complaint/page.js"
+    ],
+    "/mcd/complaint/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/complaint/loading.js"
+    ],
+    "/mcd/community/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/community/page.js"
+    ],
+    "/mcd/community/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/community/loading.js"
+    ],
+    "/mcd/community/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/community/[id]/page.js"
+    ],
+    "/mcd/CommunityPage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mcd/CommunityPage/page.css",
+      "static/chunks/app/mcd/CommunityPage/page.js"
+    ],
+    "/mcd/CommunityPage/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/CommunityPage/loading.js"
+    ],
+    "/mcd/DonationPage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/mcd/DonationPage/page.css",
+      "static/chunks/app/mcd/DonationPage/page.js"
+    ],
+    "/mcd/DonationPage/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/mcd/DonationPage/loading.js"
+    ],
+    "/admin/ScrapRequest/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/ScrapRequest/page.js"
+    ],
+    "/admin/ScrapRequest/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/ScrapRequest/loading.js"
+    ],
+    "/admin/complaint/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/admin/complaint/page.css",
+      "static/chunks/app/admin/complaint/page.js"
+    ],
+    "/admin/complaint/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/complaint/loading.js"
+    ],
+    "/admin/biditem/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/biditem/page.js"
+    ],
+    "/admin/biditem/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/admin/biditem/loading.js"
+    ],
+    "/ngo/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/profile/page.js"
+    ],
+    "/ngo/profile/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/profile/loading.js"
+    ],
+    "/ngo/ScrapPortal/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/ScrapPortal/page.js"
+    ],
+    "/ngo/ScrapPortal/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/ScrapPortal/loading.js"
+    ],
+    "/ngo/Ecommerce/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/Ecommerce/page.js"
+    ],
+    "/ngo/Ecommerce/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/Ecommerce/loading.js"
+    ],
+    "/ngo/MyOrders/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ngo/MyOrders/page.css",
+      "static/chunks/app/ngo/MyOrders/page.js"
+    ],
+    "/ngo/MyOrders/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/MyOrders/loading.js"
+    ],
+    "/ngo/DonationPage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/ngo/DonationPage/page.css",
+      "static/chunks/app/ngo/DonationPage/page.js"
+    ],
+    "/ngo/DonationPage/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/ngo/DonationPage/loading.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
+    ]
+  }
+}
