@@ -16,7 +16,7 @@ export default function Navbar() {
             <button className="flex items-center space-x-1 rtl:space-x-reverse">
               <img src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335264/szb47nadwus0b01ldgug.png" className="h-12" alt="Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                <img src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335926/bpogdgkuttpr1yh0x2ss.png" alt="Eco scrap Logo" className="h-8 inline-block" />
+                <img src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335226/pfzxgp7vkw7onrowfujn.png" alt="Eco scrap Logo" className="h-8 inline-block" />
               </span>
             </button>
           </Link>

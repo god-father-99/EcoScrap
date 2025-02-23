@@ -11,7 +11,7 @@ const Profile: React.FC = () => {
           {/* Profile Photo */}
           <div className="w-24 h-24 mb-6">
             <img
-              src="/2.webp" // Replace with your photo path
+              src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335058/rulirh1zxx0v7ltsuxhl.webp" // Replace with your photo path
               alt="Profile Photo"
               className="w-full h-full rounded-full object-cover border-4 border-blue-500"
             />

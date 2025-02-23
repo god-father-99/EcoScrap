@@ -1,10 +1,3 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/signin/page": "app/signin/page.js",
-  "/admin/profile/page": "app/admin/profile/page.js",
-  "/admin/ScrapRequest/page": "app/admin/ScrapRequest/page.js",
-  "/ngo/profile/page": "app/ngo/profile/page.js",
-  "/ngo/ScrapPortal/page": "app/ngo/ScrapPortal/page.js",
-  "/mcd/profile/page": "app/mcd/profile/page.js",
-  "/mcd/community/page": "app/mcd/community/page.js"
+  "/page": "app/page.js"
 }

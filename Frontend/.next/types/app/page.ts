@@ -1,4 +1,4 @@
-// File: D:\Downloads\ecoscrap\app\page.tsx
+// File: C:\Users\lkssw\OneDrive\Desktop\EcoScrap\Frontend\app\page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

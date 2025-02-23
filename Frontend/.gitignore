@@ -36,3 +36,9 @@ build/
 application.properties
 data.sql
 node_modules
+
+#Ignore files
+.mvn
+.env.local
+.next
+.env.example
