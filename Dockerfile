@@ -1,0 +1,15 @@
+# Use the official OpenJDK 21 image (non-alpine)
+FROM openjdk:21-jdk
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy the JAR file from the target directory into the container
+#COPY target/EcoScrap-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY target/ecoscrap-0.0.1-SNAPSHOT.jar /app/app.jar
+
+# Expose the port that the Spring Boot app will run on
+EXPOSE 8080
+
+# Run the Spring Boot application
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
