@@ -26,10 +26,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import software.amazon.awssdk.services.sns.SnsClient;
-import software.amazon.awssdk.services.sns.model.SnsException;
-import software.amazon.awssdk.services.sns.model.SubscribeRequest;
-import software.amazon.awssdk.services.sns.model.SubscribeResponse;
+import software.amazon.awssdk.services.sns.model.*;
 
+import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 import java.util.Random;
 import java.util.Set;
@@ -48,6 +47,9 @@ public class KabadiwalaService {
 
     @Value("${TOPIC_ARN}")
     private String topicArn;
+
+    @Value("${TOPIC_ARN_CUSTOMER}")
+    private String topicArnCustomer;
 
     public UserDto signUp(SignUpKwDto signUpKwDto) {
         Optional<User> user = userRepository.findByUsername(signUpKwDto.getUsername());
@@ -85,6 +87,38 @@ public class KabadiwalaService {
         String user= SecurityContextHolder.getContext().getAuthentication().getName();
         User user1=userRepository.findByUsername(user).orElseThrow(()->new ResourceNotFoundException("User Not Found"));
         Kabadiwala kabadiwala=kabadiwalaRepository.findByUser(user1).orElseThrow(()->new ResourceNotFoundException("Kabadiwala Not Found"));
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy, hh:mm a");
+
+            // Format the requestedTime
+            String formattedTime = scrapPickupRequest.getRequestedTime().format(formatter);
+            String message = String.format(
+                    "Dear %s,\n\n" +
+                            "Your scrap pickup request has been accepted!\n\n" +
+                            "Scrap Collector is on his way.\n\n" +
+                            "Pickup Details:\n" +
+                            "Kabadiwala: %s\n" +
+                            "Contact: %s\n" +
+                            "Scheduled Pickup Time: %s\n\n" +
+                            "Thank you for using our service!\n\n" +
+                            "Best regards,\n" +
+                            "Your Scrap Management Team",
+                    user, kabadiwala.getUser().getName(), kabadiwala.getUser().getPhoneNo(), formattedTime
+            );
+
+            PublishRequest publishRequest = PublishRequest.builder()
+                    .message(message)
+                    .topicArn(topicArnCustomer)
+                    .build();
+
+            PublishResponse result = snsClient.publish(publishRequest);
+            System.out
+                    .println(result.messageId() + " Message sent. Status is " + result.sdkHttpResponse().statusCode());
+
+        } catch (SnsException e) {
+            System.err.println(e.awsErrorDetails().errorMessage());
+            System.exit(1);
+        }
         scrapPickupRequest.setScrapPickupRequestStatus(ScrapPickupRequestStatus.CONFIRMED);
         ScrapListing scrapListing=modelMapper.map(scrapPickupRequest, ScrapListing.class);
         scrapListing.setAssignedKabadiwala(kabadiwala);
