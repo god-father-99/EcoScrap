@@ -36,7 +36,7 @@ public class WebSecurityConfig {
                 //.cors(cors->cors.disable())
                 .cors(cors -> cors.configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(List.of("http://10.160.33.9:3001")); // ✅ Use frontend URL, NOT "*"
+                    config.setAllowedOrigins(List.of("https://scrap.rablo.cloud"));
                     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     config.setAllowedHeaders(List.of("*"));
                     config.setAllowCredentials(true); // ✅ Allow credentials (cookies, sessions)
