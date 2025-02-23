@@ -174,7 +174,7 @@ export default function Chatbot() {
         className="fixed right-4 bottom-4 p-0 w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-lg hover:shadow-xl hover:scale-105 transition-transform ease-in-out duration-300 flex items-center justify-center overflow-hidden"
       >
         <img 
-          src="/4.png" 
+          src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335215/m7k6g2c5fexfit3jbolt.png" 
           alt="Eco scrap Mitar"
           className="w-20 h-20 transform translate-y-2 rounded-full object-contain"
         />

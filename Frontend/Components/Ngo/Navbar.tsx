@@ -14,9 +14,9 @@ export default function Navbar() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/ngo/signin">
             <button className="flex items-center space-x-1 rtl:space-x-reverse">
-              <img src="/Customer.png" className="h-12" alt="Logo" />
+              <img src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335255/tmtyzukwnuv2oyk4io95.png" className="h-12" alt="Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                <img src="/5.png" alt="Eco scrap Logo" className="h-8 inline-block" />
+                <img src="https://res.cloudinary.com/drivss6vy/image/upload/v1740335926/bpogdgkuttpr1yh0x2ss.png" alt="Eco scrap Logo" className="h-8 inline-block" />
               </span>
             </button>
           </Link>
