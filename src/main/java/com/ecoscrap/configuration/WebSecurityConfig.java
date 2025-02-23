@@ -36,10 +36,10 @@ public class WebSecurityConfig {
                 //.cors(cors->cors.disable())
                 .cors(cors -> cors.configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(List.of("*"));
+                    config.setAllowedOrigins(List.of("http://10.160.33.9:3001")); // ✅ Use frontend URL, NOT "*"
                     config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
                     config.setAllowedHeaders(List.of("*"));
-                    config.setAllowCredentials(false);
+                    config.setAllowCredentials(true); // ✅ Allow credentials (cookies, sessions)
                     return config;
                 }))
                 .authorizeHttpRequests(auth -> auth
