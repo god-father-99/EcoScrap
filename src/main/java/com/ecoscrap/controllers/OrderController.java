@@ -2,6 +2,8 @@ package com.ecoscrap.controllers;
 
 import com.ecoscrap.advices.ApiResponse;
 import com.ecoscrap.dto.OrderDto;
+import com.ecoscrap.dto.ProductDto;
+import com.ecoscrap.entities.Otp;
 import com.ecoscrap.services.OrderService;
 import com.razorpay.RazorpayException;
 import lombok.RequiredArgsConstructor;
@@ -46,6 +48,16 @@ public class OrderController {
     @PostMapping("/place1")
     public ResponseEntity<OrderDto> placeOrder1(@RequestParam Long productId, @RequestParam(defaultValue = "1") int quantity){
         return ResponseEntity.ok(orderService.placeOrder1(productId, quantity));
+    }
+
+    @GetMapping("/allkw")
+    public ResponseEntity<List<OrderDto>> getAllOrdersKw() {
+        return ResponseEntity.ok(orderService.getAllOrdersOfKabadiwala());
+    }
+
+    @PostMapping("/allkw/{orderId}")
+    public ResponseEntity<OrderDto> deliverOrder(@PathVariable Long orderId,@RequestBody Otp otp) {
+        return  ResponseEntity.ok(orderService.deliverOrder(orderId,otp));
     }
 }
 

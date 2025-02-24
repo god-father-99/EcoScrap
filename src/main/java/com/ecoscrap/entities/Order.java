@@ -1,6 +1,7 @@
 package com.ecoscrap.entities;
 
 import com.ecoscrap.entities.enums.OrderStatus;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,5 +30,9 @@ public class Order {
 
     @Enumerated(EnumType.STRING)
     private OrderStatus status = OrderStatus.PENDING;
+
+    @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Otp otp;
 }
 
