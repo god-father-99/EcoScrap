@@ -132,7 +132,7 @@ public class OrderService {
             otp1.setOrder(orders);
             otpRepository.save(otp1);
             String emailContent = String.format(emailTemplate,
-                    orders.getCustomer().getUser().getName(), orders.getId(), orders.getProduct().getName(), orders.getTotalPrice(), orders.getStatus(),razorpayId,generateRandomOTP(),
+                    orders.getCustomer().getUser().getName(), orders.getId(), orders.getProduct().getName(), orders.getTotalPrice(), orders.getStatus(),razorpayId,otp,
                     "jagamara , bhubaneswar",formattedTime , orders.getProduct().getKabadiwala().getUser().getName(),
                     orders.getProduct().getKabadiwala().getUser().getPhoneNo(), "EcoScrap");
 
