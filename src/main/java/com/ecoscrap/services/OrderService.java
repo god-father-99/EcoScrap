@@ -195,7 +195,6 @@ public class OrderService {
                 - Item Ordered: %s  
                 - Total Amount: ₹%s  
                 - Payment Status: %s  
-                - Payment ID: %s
                 -OTP for delivery : %s
 
                 📍 Delivery Details:  
@@ -219,10 +218,9 @@ public class OrderService {
             otp1.setOrder(savedOrder);
             otpRepository.save(otp1);
                     String emailContent = String.format(emailTemplate,
-                    savedOrder.getCustomer().getUser().getName(), savedOrder.getId(), savedOrder.getProduct().getName(), savedOrder.getTotalPrice(), savedOrder.getStatus(),razorpayId,otp,
+                    savedOrder.getCustomer().getUser().getName(), savedOrder.getId(), savedOrder.getProduct().getName(), savedOrder.getTotalPrice(), savedOrder.getStatus(),otp,
                     "jagamara , bhubaneswar",formattedTime , savedOrder.getProduct().getKabadiwala().getUser().getName(),
                     savedOrder.getProduct().getKabadiwala().getUser().getPhoneNo(), "EcoScrap");
-
 
             PublishRequest publishRequest = PublishRequest.builder()
                     .message(emailContent)
