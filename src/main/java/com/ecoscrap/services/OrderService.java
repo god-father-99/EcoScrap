@@ -133,7 +133,7 @@ public class OrderService {
             otpRepository.save(otp1);
             String emailContent = String.format(emailTemplate,
                     orders.getCustomer().getUser().getName(), orders.getId(), orders.getProduct().getName(), orders.getTotalPrice(), orders.getStatus(),razorpayId,otp,
-                    "jagamara , bhubaneswar",formattedTime , orders.getProduct().getKabadiwala().getUser().getName(),
+                    "7QMF+XCH, Unnamed Road, Kalinganagar, Bhubaneswar, Odisha 751003",formattedTime , orders.getProduct().getKabadiwala().getUser().getName(),
                     orders.getProduct().getKabadiwala().getUser().getPhoneNo(), "EcoScrap");
 
 
@@ -219,7 +219,7 @@ public class OrderService {
             otpRepository.save(otp1);
                     String emailContent = String.format(emailTemplate,
                     savedOrder.getCustomer().getUser().getName(), savedOrder.getId(), savedOrder.getProduct().getName(), savedOrder.getTotalPrice(), savedOrder.getStatus(),otp,
-                    "jagamara , bhubaneswar",formattedTime , savedOrder.getProduct().getKabadiwala().getUser().getName(),
+                    "7QMF+XCH, Unnamed Road, Kalinganagar, Bhubaneswar, Odisha 751003",formattedTime , savedOrder.getProduct().getKabadiwala().getUser().getName(),
                     savedOrder.getProduct().getKabadiwala().getUser().getPhoneNo(), "EcoScrap");
 
             PublishRequest publishRequest = PublishRequest.builder()
